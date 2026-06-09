@@ -101,53 +101,74 @@
 
 <script>
   const DOCS = [
-    { num: '01', title: 'HR',                                file: 'docs/01-HR.md' },
-    { num: '02', title: 'Project DogOps',                    file: 'docs/02-ProjectDogOps.md' },
-    { num: '03', title: 'DLP — All Credential Types',        file: 'docs/03-DLP-AllCredentialTypes.md' },
-    { num: '04', title: 'IRM — Departing MI5 Agent Theft',   file: 'docs/04-IRM-DepartingMI5AgentDataTheft.md' },
-    { num: '05', title: 'eDLP & AI',                         file: 'docs/05-eDLP&AI.md' }
+    { group: 'Lab Scenarios', num: '01', title: 'HR',                              file: 'docs/01-HR.md',                              dir: '' },
+    { group: 'Lab Scenarios', num: '02', title: 'Project DogOps',                  file: 'docs/02-ProjectDogOps.md',                  dir: '' },
+    { group: 'Lab Scenarios', num: '03', title: 'DLP — All Credential Types',      file: 'docs/03-DLP-AllCredentialTypes.md',         dir: '' },
+    { group: 'Lab Scenarios', num: '04', title: 'IRM — Departing MI5 Agent Theft', file: 'docs/04-IRM-DepartingMI5AgentDataTheft.md', dir: '' },
+    { group: 'Lab Scenarios', num: '05', title: 'eDLP & AI',                       file: 'docs/05-eDLP&AI.md',                        dir: '' },
+    { group: 'After the Lab', num: '',   title: 'HR',                              file: '../AFTER THE LAB/docs/HR.md',                              dir: '../AFTER THE LAB/' },
+    { group: 'After the Lab', num: '',   title: 'Project DogOps',                  file: '../AFTER THE LAB/docs/ProjectDogOps.md',                  dir: '../AFTER THE LAB/' },
+    { group: 'After the Lab', num: '',   title: 'DLP — All Credential Types',      file: '../AFTER THE LAB/docs/DLP-AllCredentialTypes.md',         dir: '../AFTER THE LAB/' }
   ];
 
   const navList = document.getElementById('navList');
   const docPaper = document.getElementById('docPaper');
 
+  // Build nav with grouped sections
+  const groups = {};
   DOCS.forEach((d, i) => {
-    const li = document.createElement('li');
-    li.className = 'nav-item';
-    li.innerHTML = `<span class="num">${d.num}</span>${d.title}`;
-    li.addEventListener('click', () => loadDoc(i));
-    navList.appendChild(li);
+    (groups[d.group] = groups[d.group] || []).push({ ...d, idx: i });
+  });
+  const navPanel = document.querySelector('.nav-panel');
+  navPanel.innerHTML = '';
+  Object.keys(groups).forEach(groupName => {
+    const section = document.createElement('div');
+    section.className = 'nav-section';
+    const h2 = document.createElement('h2');
+    h2.textContent = groupName;
+    section.appendChild(h2);
+    const ul = document.createElement('ul');
+    ul.className = 'nav-list';
+    groups[groupName].forEach(d => {
+      const li = document.createElement('li');
+      li.className = 'nav-item';
+      li.dataset.idx = d.idx;
+      li.innerHTML = d.num ? `<span class="num">${d.num}</span>${d.title}` : `<span class="num">·</span>${d.title}`;
+      li.addEventListener('click', () => loadDoc(d.idx));
+      ul.appendChild(li);
+    });
+    section.appendChild(ul);
+    navPanel.appendChild(section);
   });
 
   async function loadDoc(i) {
-    document.querySelectorAll('.nav-item').forEach((el, idx) => {
-      el.classList.toggle('active', idx === i);
+    document.querySelectorAll('.nav-item').forEach(el => {
+      el.classList.toggle('active', Number(el.dataset.idx) === i);
     });
     docPaper.innerHTML = '<div class="loading">Loading…</div>';
     try {
-      const res = await fetch(DOCS[i].file);
+      const doc = DOCS[i];
+      const res = await fetch(doc.file);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       let md = await res.text();
       const html = marked.parse(md);
-      // The page lives at LAB GUIDE/; docs reference '../images/', '../materials/', etc.
-      // Rewrite '../' to '' on any relative href/src so they resolve from LAB GUIDE/.
       const tmp = document.createElement('div');
       tmp.innerHTML = html;
+      // Resolve relative refs: strip '../' then prefix with doc.dir (where this doc lives)
       tmp.querySelectorAll('[href], [src]').forEach(el => {
         ['href', 'src'].forEach(attr => {
           const v = el.getAttribute(attr);
           if (!v) return;
-          // Skip absolute URLs, anchors, mail/tel
           if (/^(https?:|mailto:|tel:|#|\/\/|\/)/i.test(v)) return;
-          el.setAttribute(attr, v.replace(/^(\.\.\/)+/, ''));
+          const stripped = v.replace(/^(\.\.\/)+/, '');
+          el.setAttribute(attr, doc.dir + stripped);
         });
       });
-      // Force download for material files and any non-viewable local asset
+      // Force download for material files
       tmp.querySelectorAll('a[href]').forEach(a => {
         const href = a.getAttribute('href');
         if (!href || /^(https?:|mailto:|tel:|#|\/\/)/i.test(href)) return;
-        // Trigger download for materials/ links and common downloadable extensions
-        if (/^materials\//i.test(href) || /\.(zip|txt|csv|pdf|docx?|xlsx?|pptx?|json|xml|ps1|7z|tar|gz)$/i.test(href)) {
+        if (/(?:^|\/)materials\//i.test(href) || /\.(zip|txt|csv|pdf|docx?|xlsx?|pptx?|json|xml|ps1|7z|tar|gz)$/i.test(href)) {
           const filename = href.split('/').pop();
           a.setAttribute('download', filename);
         }
