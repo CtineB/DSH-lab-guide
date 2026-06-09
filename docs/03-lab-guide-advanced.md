@@ -23,7 +23,7 @@ Before starting this phase, complete [Phase 2 — Lab Guide](02-lab-guide.md):
 
 > **Verify:** both policies appear under **DSPM** with status **On**.
 
-## Notify users who store credentials in OneDrive or SharePoint
+## Notify users who store credentials in OneDrive or SharePoint `#E5Dev` `#CDX` 
 
 1. Go to **Data loss prevention** > **Policies** > **Create policy**.
 2. Select **Custom policy**.
