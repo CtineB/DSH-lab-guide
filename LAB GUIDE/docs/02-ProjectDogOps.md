@@ -11,8 +11,8 @@ Together these steps demonstrate how custom classifiers, sensitivity labels, and
 ### Create a custom SIT — ProjectDogOps
 
 1. The keyword dictionaries are included in this repo:
-   - [`materials/DogBreeds.txt`](https://github.com/hekuosa/DSH-lab-guide/blob/main/LAB%20GUIDE/materials/DogBreeds.txt)
-   - [`materials/DogWords.txt`](https://github.com/hekuosa/DSH-lab-guide/blob/main/LAB%20GUIDE/materials/DogWords.txt)
+   - [`materials/DogBreeds.txt`](../materials/DogBreeds.txt)
+   - [`materials/DogWords.txt`](../materials/DogWords.txt)
 
    Save them locally so you can upload them in the wizard.
 
