@@ -178,18 +178,7 @@ You can create SIT either through the Microsoft Purview portal or by using Secur
 Over the following days, actions that match the IRM policy to generate alert.
 
 You can create PowerAutomate flows or manually perform the activities. 
-
-Example PowerAutomate flow to trigger the "Download from M365 location then exfiltrate" sequence detection:
-
-**IRM Collect Documents and Exfiltrate**
- ![PowerAutomate flow](../images/pa-irm2.png)
- ![PowerAutomate flow](../images/pa-step1-irm2.png)
- ![PowerAutomate flow](../images/pa-step2-irm2.png)
- ![PowerAutomate flow](../images/pa-step3-irm2.png)
- ![PowerAutomate flow](../images/pa-step4-irm2.png)
- ![PowerAutomate flow](../images/pa-step5-irm2.png)
- ![PowerAutomate flow](../images/pa-step6-irm2.png)
- ![PowerAutomate flow](../images/pa-step7-irm2.png)
+Example PowerAutomate flow: [`materials/PowerAutomateIRM.pdf`](../materials/PowerAutomateIRM.pdf)
 
 
 
