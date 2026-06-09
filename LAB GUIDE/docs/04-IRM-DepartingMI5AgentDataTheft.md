@@ -125,7 +125,7 @@ You can create SIT either through the Microsoft Purview portal or by using Secur
 
 1. Create a **Universal Exports** SharePoint site or use any of the existing SPO sites.
 2. Create a new document library named `MI5`
-2. Upload the [`materials/JamesBondDailyBriefings/`](../materials/JamesBondDailyBriefings/) and [`materials/ProjectDocuments/`](../materials/ProjectDocuments/) folders to the `MI5` document library.
+2. Download and unzip [`materials/JamesBondDailyBriefings.zip`](../materials/JamesBondDailyBriefings.zip) and [`materials/ProjectDocuments.zip`](../materials/ProjectDocuments.zip), then upload the extracted folders to the `MI5` document library.
 
 
 ## Create an Insider Risk Management policy
