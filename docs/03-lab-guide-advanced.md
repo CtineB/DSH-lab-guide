@@ -14,7 +14,7 @@ Before starting this phase, complete [Phase 2 — Lab Guide](02-lab-guide.md):
 
 # Data Loss Prevention
 
-## DSPM — extend insights for data discovery <kbd>E5Dev</kbd>
+## DSPM — extend insights for data discovery `#E5Dev` 
 
 1. Go to **DSPM** > **Tasks and actions** > **Setup tasks**.
 2. Select **Extend your insights for data discovery** and create the following policies:
@@ -23,7 +23,7 @@ Before starting this phase, complete [Phase 2 — Lab Guide](02-lab-guide.md):
 
 > **Verify:** both policies appear under **DSPM** with status **On**.
 
-## Notify users who store credentials in OneDrive or SharePoint `#E5Dev` `#CDX` 
+## Notify users who store credentials in OneDrive or SharePoint 
 
 1. Go to **Data loss prevention** > **Policies** > **Create policy**.
 2. Select **Custom policy**.
