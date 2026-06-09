@@ -1,5 +1,5 @@
 # Lab Guide — Advanced
-
+<mark style="background:orange">Intermediate</mark>   
 _Heta Kuosa & Christine Dienel · Microsoft EMEA · 2026_
 
 This advanced phase extends the core lab with **Data Loss Prevention (DLP)**, **Data Security Posture Management (DSPM)**, and an **Insider Risk Management (IRM)** scenario — _Departing Agent Data Theft_. It builds on the labels and policies created in [Phase 2 — Lab Guide](02-lab-guide.md).
