@@ -48,8 +48,8 @@ This scenario simulates a departing employee exfiltrating data, using an HR data
 
 1. Open the **Employee Resignations Simulation Template** Excel file.
 2. Populate column A with the email addresses of the participating users:
-   - `#M365 E5 Developer` Isaiah Langer, `IsaiahL@<tenantname>.onmicrosoft.com`
-   - `#MDX/CDX` USER , `user@<tenantname>.onmicrosoft.com` 
+   - <kbd>M365 E5 Developer</kbd> Isaiah Langer, `IsaiahL@<tenantname>.onmicrosoft.com`
+   - <kbd>MDX/CDX</kbd>  USER , `user@<tenantname>.onmicrosoft.com` 
  
 4. The template includes pre-configured values for `<ResignationDate>` (midnight on the current day) and `<LastWorkingDate>` (10 days later).
 
