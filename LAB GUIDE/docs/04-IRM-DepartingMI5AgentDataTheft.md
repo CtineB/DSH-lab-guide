@@ -173,10 +173,26 @@ You can create SIT either through the Microsoft Purview portal or by using Secur
 
 > **Verify:** the **Departing agent data theft** policy appears under **Insider Risk Management** > **Policies** with status **On**.
 
-## Generate sample activity (days 1–3)
+## Generate activity to trigger alerts
 
-Over the first three days, perform the following actions as the departing user to generate alerts:
+Over the following days, actions that match the IRM policy to generate alert.
 
-- Download 2 files from SharePoint to OneDrive.
-- Send 1 email to a recipient outside the organization.
-- Send 1 email to a public (free) domain.
+You can create PowerAutomate flows or manually perform the activities. 
+
+Example PowerAutomate flow to trigger the "Download from M365 location then exfiltrate" sequence detection:
+
+**IRM Collect Documents and Exfiltrate**
+ ![PowerAutomate flow](../images/pa-irm2.png)
+ ![PowerAutomate flow](../images/pa-step1-irm2.png)
+ ![PowerAutomate flow](../images/pa-step2-irm2.png)
+ ![PowerAutomate flow](../images/pa-step3-irm2.png)
+ ![PowerAutomate flow](../images/pa-step4-irm2.png)
+ ![PowerAutomate flow](../images/pa-step5-irm2.png)
+ ![PowerAutomate flow](../images/pa-step6-irm2.png)
+ ![PowerAutomate flow](../images/pa-step7-irm2.png)
+
+
+
+
+
+
