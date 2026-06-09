@@ -1,4 +1,3 @@
-# Lab Guide — Developer Subscription
 
 ## Prerequisites
 
