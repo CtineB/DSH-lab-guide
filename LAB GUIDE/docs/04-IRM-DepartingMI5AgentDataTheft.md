@@ -4,7 +4,7 @@ This scenario simulates a departing employee exfiltrating data, using an HR data
 
 ## Create the resignation CSV file
 
-1. Open the **Employee Resignations Simulation Template** Excel file.
+1. Open the [Employee Resignations Simulation Template](../materials/EmployeeResignationsSimulationTemplate.xlsx) Excel file.
 2. Populate column A with the email addresses of the participating users. You can use the demo user Isaiah Langer (`IsaiahL@<tenantname>.onmicrosoft.com`) or any other user in your tenant.
 3. The template includes pre-configured values for `<ResignationDate>` (midnight on the current day) and `<LastWorkingDate>` (10 days later).
 
