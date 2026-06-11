@@ -34,4 +34,6 @@ End-user follow-up scenarios that exercise the configurations applied during the
 
 ### Pre-lab setup
 
-Before starting these scenarios, prepare your tenant using [hekuosa/before-the-lab](https://github.com/hekuosa/before-the-lab).
+Before starting these scenarios, prepare your tenant using before the lab guide
+- Browse online: https://hekuosa.github.io/before-the-lab/HTML/ 
+- Browse GitHub repo: https://github.com/hekuosa/before-the-lab
