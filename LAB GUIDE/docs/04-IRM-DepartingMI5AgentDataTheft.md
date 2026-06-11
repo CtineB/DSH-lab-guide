@@ -68,12 +68,11 @@ For more information on licensing, see the [Microsoft Purview service descriptio
 
 ## Run the sample script to upload your HR data
 
-> _Add the `webhook.ingestion.office.com` domain to your organization's firewall allowlist. If you block this domain, the script won't run._
-
 The final step is to run a sample script that uploads the HR data from the CSV file to the connector.
 
 1. On the **Data connectors** overview page, on the **My Connectors** tab, select your `DSH-HRconnector`.
-2. On the connector details page, select **Get sample script**.
+2. On the connector details page, select **Get sample script** or download it from [m365-compliance-connector-sample-scripts
+/sample_script.ps1](https://github.com/microsoft/m365-compliance-connector-sample-scripts/blob/main/sample_script.ps1)
 
    ![DSH-HRconnector details page with the Get sample script button](../images/dsh-hrconnector-get-sample-script.png)
 
