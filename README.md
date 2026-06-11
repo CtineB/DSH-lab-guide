@@ -2,8 +2,8 @@
 
 Lab guides for the **Data Security Hack To Build** — Microsoft Purview configuration scenarios.
 
-Browse online: <https://hekuosa.github.io/DSH-lab-guide/HTML/>
-Browse GitHub repo: <https://github.com/hekuosa/DSH-lab-guide>
+- Browse online: <https://hekuosa.github.io/DSH-lab-guide/HTML/>
+- Browse GitHub repo: <https://github.com/hekuosa/DSH-lab-guide>
 
 ## Contents
 
