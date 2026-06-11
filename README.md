@@ -1,22 +1,28 @@
-# DSH Lab Guide
+# Data Security Hack To Build
 
-Lab guides for the **Data Security Hack (DSH)** — Microsoft Purview best-practice configuration scenarios.
+Lab guides for the **Data Security Hack To Build** — Microsoft Purview configuration scenarios.
 
 Browse online: <https://hekuosa.github.io/DSH-lab-guide/HTML/>
+Browse GitHub repo: <https://github.com/hekuosa/DSH-lab-guide>
 
 ## Contents
 
-The repo contains the hands-on lab scenarios plus follow-up end-user activities.
+The repository provides hands-on lab scenarios along with follow-up end-user scenarios. 
+Follow-up scenarios are typically available the next day, although some may start working within one to two hours.
 
 ### Lab guide
 
-Five Microsoft Purview scenarios, each end-to-end.
+Five Microsoft Purview scenarios: 
 
 - [01 – HR](LAB%20GUIDE/docs/01-HR.md)
 - [02 – Project DogOps](LAB%20GUIDE/docs/02-ProjectDogOps.md)
 - [03 – DLP: All Credential Types](LAB%20GUIDE/docs/03-DLP-AllCredentialTypes.md)
-- [04 – IRM: Departing MI5 Agent Data Theft](LAB%20GUIDE/docs/04-IRM-DepartingMI5AgentDataTheft.md)
-- [05 – eDLP & AI](LAB%20GUIDE/docs/05-eDLP%26AI.md)
+- [04 – IRM: Departing MI5 Agent Data Theft](LAB%20GUIDE/docs/04-IRM-DepartingMI5AgentDataTheft.md)   -- HR connector is not available in CDX 
+- [05 – eDLP & AI](LAB%20GUIDE/docs/05-eDLP%26AI.md) -- Requires endpoint DLP 
+
+#### Microsoft Applied Skills
+
+When you are done with the lab scenarios move to [Microsoft Applied Skills: Implement information protection and data loss prevention by using Microsoft Purview](https://learn.microsoft.com/en-us/credentials/applied-skills/implement-information-protection-and-data-loss-prevention-by-using-microsoft-purview/)
 
 ### After the lab
 
@@ -26,10 +32,6 @@ End-user follow-up scenarios that exercise the configuration applied during the 
 - [02 – Project DogOps](AFTER%20THE%20LAB/docs/02-ProjectDogOps.md)
 - [03 – DLP: All Credential Types](AFTER%20THE%20LAB/docs/03-DLP-AllCredentialTypes.md)
 
-## Pre-lab setup
+### Pre-lab setup
 
 Before starting these scenarios, prepare your tenant using [hekuosa/before-the-lab](https://github.com/hekuosa/before-the-lab).
-
-## Source
-
-Extracted from the [Data-Security-Hack](https://github.com/hetakuosa_microsoft/Data-Security-Hack) repo.
